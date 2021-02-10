@@ -1,9 +1,11 @@
 import './App.css';
-import { MovieProvider } from './MovieContext';
-import MovieList from './MovieList';
-import Nav from './Nav';
+
 
 function App() {
+
+  const exampleReq=`https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`
+
+
   return (
  
 
