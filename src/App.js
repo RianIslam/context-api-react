@@ -10,7 +10,10 @@ function App() {
  
 
     <div className="App">
-      hello world
+    <form className="search__form">
+      <input className="search__bar" type="text"/>
+      <button className="search__button" type="submit"/>
+    </form>
     </div>
 
 
