@@ -5,12 +5,14 @@ import Nav from './Nav';
 
 function App() {
   return (
+ 
     <MovieProvider>
     <div className="App">
-    <Nav/>
-    <MovieList/>
+      <Nav/>
+      <MovieList/>
     </div>
     </MovieProvider>
+
   );
 }
 

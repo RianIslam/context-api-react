@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 
 export const MovieProvider = createContext();
 
-const MovieContext = () => {
+const MovieContext = (props) => {
   const [movies, setMovies] = useState([
     {
       name: "Avengers",
@@ -22,8 +22,8 @@ const MovieContext = () => {
   ]);
 
   return (
-    <MovieContext.Provider value={'hey this works'}>
-    {props.children}
+    <MovieContext.Provider value={[movies,setMovies]}>
+      {props.children}
     </MovieContext.Provider>
   );
 };
