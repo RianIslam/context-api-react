@@ -19,9 +19,10 @@ function App() {
     <div className="App">
     <form className="search__form">
       <input className="search__bar" type="text"/>
-      <button onClick={()=>setcounter(counter+1)} className="search__button" type="submit">
-      {counter}
+      <button className="search__button" type="submit">
+      Search
       </button>
+      <h1 onClick={()=>setcounter(counter +1)}>{counter}</h1>
     </form>
     </div>
 
