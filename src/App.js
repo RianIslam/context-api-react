@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Recipe from "./Recipe";
 
 function App() {
-  const [counter, setcounter] = useState(0);
-
+  const [recipes,setRecipes] = useState([]);
   useEffect(() => {
     getRecipes();
   }, []);
@@ -13,7 +13,8 @@ function App() {
       `https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`
     );
     const data = await response.json();
-    console.log(data);
+    setRecipes(data.meals[0]);
+    console.log(data.meals[0])
   };
   return (
     <div className="App">
@@ -23,6 +24,9 @@ function App() {
           Search
         </button>
       </form>
+      {recipes.map(recipe=>(
+        <Recipe/>
+      ))}
     </div>
   );
 }
