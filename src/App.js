@@ -8,6 +8,16 @@ function App() {
     </div>
   );
 }
+function Product(){
+  const productStyle = {
+
+  }
+  return(
+    <div style={productStyle}>
+      <h3>i am product</h3>
+    </div>
+  )
+}
 
 function Person(props) {
   const someColor ={
