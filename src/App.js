@@ -35,6 +35,7 @@ function App() {
       <Nayok name="jasim"></Nayok>
       <Nayok name="Sakib Khan"></Nayok>
       <Nayok name="BappaRaz"></Nayok>
+      <MovieCounter></MovieCounter>
     </div>
   );
 }
@@ -118,6 +119,20 @@ function Nayok(props){
   return(
     <div style={nayokStyle}>
       <h1>Ami Nayol {props.name}:</h1>
+    </div>
+  )
+}
+
+function MovieCounter(){
+  const [count,setCount] = useState(5);
+
+  const handleClick = () =>{
+    setCount(count +1);
+  }
+  return(
+    <div>
+      <button  onClick={handleClick}>Add Movie</button>
+      <h5>Number of Movies: {count}</h5>
     </div>
   )
 }
