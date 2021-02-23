@@ -2,6 +2,16 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+
+  const [nayoks,setNayoks] = useState([])
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res=> res.json())
+    .then(data => setNayoks(data))
+  },[])
+
+
+
   const products =[
     {name:'photoshop', price:'$90.99'},
     {name:'Illustrator',price:'$55.55'},
@@ -111,17 +121,35 @@ function Person(props) {
     </div>
   );
 }
+
+
+
+
 function Nayok(props){
   const nayokStyle={
     border : '2px solid purple',
     margin : '20px'
   }
+  const nayoks = ["Abul","Kabul","Sabul","Tabul","Mabul","Triabul"]
   return(
     <div style={nayokStyle}>
-      <h1>Ami Nayol {props.name}:</h1>
+      <h1>Ami Nayol
+      {
+        nayoks.map(nayoks=><li>{nayoks}</li>)
+      }
+       </h1>
+      
     </div>
   )
 }
+
+
+function MoviDisplay(props){
+  return(
+  <h3>Movies I Have acted:{props.movies} </h3>
+  )
+}
+
 
 function MovieCounter(){
   const [count,setCount] = useState(5);
@@ -133,6 +161,10 @@ function MovieCounter(){
     <div>
       <button  onClick={handleClick}>Add Movie</button>
       <h5>Number of Movies: {count}</h5>
+      <MoviDisplay movies={count}></MoviDisplay>
+      <MoviDisplay movies={count}></MoviDisplay>
+      <MoviDisplay movies={count}></MoviDisplay>
+      <MoviDisplay movies={count+30}></MoviDisplay>
     </div>
   )
 }
