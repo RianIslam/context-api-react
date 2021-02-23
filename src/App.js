@@ -41,9 +41,9 @@ function Counter(){
   //   const newCount = count +1;
   //   setCount(newCount);
   // }
-  const handleIncrease = () =>{
-    setCount(count+1);
-  }
+  // const handleIncrease = () =>{
+  //   setCount(count+1);
+  // }
   
   return(
     <div>
