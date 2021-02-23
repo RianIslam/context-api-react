@@ -1,15 +1,16 @@
 import "./App.css";
 
 function App() {
+  const products =[{name:'photoshop', price:'$90.99'}]
   return (
     <div className="App">
-    <Product></Product>
-      <Person name="Rian Islam" job="Software Engineer"></Person>
+    <Product name={products[0].name}></Product>
+      <Person  job="Software Engineer"></Person>
       <Person name="Kabir Ahammed" job="Software"></Person>
     </div>
   );
 }
-function Product(){
+function Product(props){
   const productStyle = {
     border : '1px solid gray',
     backgroundColor:'lightgray',
@@ -21,7 +22,7 @@ function Product(){
   }
   return(
     <div style={productStyle}>
-      <h3>i am product</h3>
+      <h3>{props.name}</h3>
       <h1>name</h1>
       <button>Buy Now</button>
     </div>
