@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -13,7 +14,9 @@ function App() {
   const NayksName = nayok.map(nayok => nayok);
   console.log(NayksName)
   return (
+    
     <div className="App">
+    <Counter></Counter>
       <ul>
         {
           nayok.map(nayok => <li>{nayok}</li>)
@@ -31,6 +34,26 @@ function App() {
     </div>
   );
 }
+function Counter(){
+  const[count,setCount] = useState(10)
+  // const handleIncrease = () =>{
+  //   const newCount = count +1;
+  //   setCount(newCount);
+  // }
+  const handleIncrease = () =>{
+    setCount(count+1);
+  }
+  
+  return(
+    <div>
+      <h1>Count : {count}</h1>
+      {/* <button onClick={handleIncrease}>Increase</button> */}
+      <button onClick={()=> setCount(count+1)}>Increase</button>
+    </div>
+  )
+}
+
+
 function Product(props){
   const productStyle = {
     border : '1px solid gray',
