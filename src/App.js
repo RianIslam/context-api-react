@@ -14,8 +14,18 @@ function App() {
   console.log(NayksName)
   return (
     <div className="App">
-    <Product product={products[0]}></Product>
-    <Product product={products[1]}></Product>
+      <ul>
+        {
+          nayok.map(nayok => <li>{nayok}</li>)
+        }
+        {
+          products.map(product => <li>{product.name}</li>)
+        }
+        {
+          products.map(product => <Product product={product}></Product>)
+        }
+    </ul>
+    
       <Person  job="Software Engineer"></Person>
       <Person name="Kabir Ahammed" job="Software"></Person>
     </div>
@@ -48,6 +58,7 @@ function Person(props) {
   }
   return (
     <div style={someColor}>
+  
       <h1>Name:{props.name}</h1>
       <h4>Passion: {props.job}</h4>
     </div>
