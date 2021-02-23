@@ -32,6 +32,9 @@ function App() {
     
       <Person  job="Software Engineer"></Person>
       <Person name="Kabir Ahammed" job="Software"></Person>
+      <Nayok name="jasim"></Nayok>
+      <Nayok name="Sakib Khan"></Nayok>
+      <Nayok name="BappaRaz"></Nayok>
     </div>
   );
 }
@@ -106,6 +109,17 @@ function Person(props) {
       <h4>Passion: {props.job}</h4>
     </div>
   );
+}
+function Nayok(props){
+  const nayokStyle={
+    border : '2px solid purple',
+    margin : '20px'
+  }
+  return(
+    <div style={nayokStyle}>
+      <h1>Ami Nayol {props.name}:</h1>
+    </div>
+  )
 }
 
 export default App;
