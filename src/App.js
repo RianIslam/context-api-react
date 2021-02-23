@@ -1,10 +1,21 @@
 import "./App.css";
 
 function App() {
-  const products =[{name:'photoshop', price:'$90.99'}]
+  const products =[
+    {name:'photoshop', price:'$90.99'},
+    {name:'Illustrator',price:'$55.55'},
+    {name:'PDF Reader',price: '$56.99'}
+  ]
+  const nayok = ["ragim","karim"]
+  const productNames = products.map(product => product)
+  console.log(productNames)
+
+  const NayksName = nayok.map(nayok => nayok);
+  console.log(NayksName)
   return (
     <div className="App">
     <Product product={products[0]}></Product>
+    <Product product={products[1]}></Product>
       <Person  job="Software Engineer"></Person>
       <Person name="Kabir Ahammed" job="Software"></Person>
     </div>
