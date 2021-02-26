@@ -1,7 +1,26 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+
+
 function App() {
+
+
+
+    const [countries,setCountry]= useState([])
+      
+    useEffect(()=>{
+      fetch('https://restcountries.eu/rest/v2/all')
+      .then(res =>res.json())
+      .then(data => setCountry(data))
+    },[])
+  
+
+
+
+
+
+
 
   const [nayoks,setNayoks] = useState([])
   useEffect(()=>{
@@ -25,7 +44,9 @@ function App() {
   console.log(NayksName)
   return (
     
+    
     <div className="App">
+    <h1>country loaded : {countries.length}</h1>
     <Counter></Counter>
     <Users></Users>
       <ul>
