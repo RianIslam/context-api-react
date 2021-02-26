@@ -9,6 +9,7 @@ function App() {
 
 
     const [countries,setCountry]= useState([])
+    const[cart,setCart] = useState([])
       
     useEffect(()=>{
       fetch('https://restcountries.eu/rest/v2/all')
@@ -52,6 +53,7 @@ function App() {
     
     <div className="App">
     <h1>country loaded : {countries.length}</h1>
+    <h2>country loade :{cart.length}</h2>
 
     <ul>
       {
