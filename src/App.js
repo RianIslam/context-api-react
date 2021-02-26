@@ -63,7 +63,7 @@ function App() {
     <h1>country loaded : {countries.length}</h1>
     <h2>country loaded :{cart.length}</h2>
     const[cart,setCountry]
-    <Cart cart={props}/>
+    <Cart cart={cart}/>
 
     <ul>
       {
