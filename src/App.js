@@ -13,17 +13,13 @@ function App() {
     useEffect(()=>{
       fetch('https://restcountries.eu/rest/v2/all')
       .then(res =>res.json())
-      .then(data =>{
-        
-        setCountry(data);
-        console.log(data);
-        const names = data.map(country => country.name)
-        console.log(names)
-        
-      })
+      .then(data =>setCountry(data))
       .catch(error => console.log(error))
     },[])
-  
+
+
+    const handleCountry = (country) =>{console.log('added',{country})}
+
 
 
 
@@ -59,7 +55,7 @@ function App() {
 
     <ul>
       {
-        countries.map(country =><Country country={country.name}>{country.name}</Country>)
+        countries.map(country =><Country country={country} key={country.alpha3Code} handleCountry={handleCountry}></Country>)
       }
     </ul>
 
