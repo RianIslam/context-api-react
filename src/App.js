@@ -19,7 +19,14 @@ function App() {
     },[])
 
 
-    const handleCountry = (country) =>{console.log('added',{country})}
+    const handleCountry = (country) =>{
+      
+    
+      const newCart =[...cart,country];
+      setCart(newCart)
+    
+    }
+
 
 
 
@@ -53,7 +60,7 @@ function App() {
     
     <div className="App">
     <h1>country loaded : {countries.length}</h1>
-    <h2>country loade :{cart.length}</h2>
+    <h2>country loaded :{cart.length}</h2>
 
     <ul>
       {
