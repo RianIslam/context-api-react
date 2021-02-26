@@ -59,7 +59,7 @@ function App() {
 
     <ul>
       {
-        countries.map(country =><Country name={country.name}>{country.name}</Country>)
+        countries.map(country =><Country country={country.name}>{country.name}</Country>)
       }
     </ul>
 
