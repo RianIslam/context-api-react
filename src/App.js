@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Country from "./components/Country/Country";
 
 
 
@@ -58,7 +59,7 @@ function App() {
 
     <ul>
       {
-        countries.map(country =><li>{country.name}</li>)
+        countries.map(country =><Country name={country.name}>{country.name}</Country>)
       }
     </ul>
 
