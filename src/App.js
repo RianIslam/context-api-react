@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Cart from "./components/Cart/Cart";
 import Country from "./components/Country/Country";
 
 
@@ -61,6 +62,8 @@ function App() {
     <div className="App">
     <h1>country loaded : {countries.length}</h1>
     <h2>country loaded :{cart.length}</h2>
+    const[cart,setCountry]
+    <Cart cart={props}/>
 
     <ul>
       {
